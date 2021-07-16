@@ -1,5 +1,178 @@
-html{
-}
 body{
     font-family: sans-serif;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    background-color: mediumblue;
+    padding: 10px;
+}
+
+header{
+    grid-area: header;
+    background-color: royalblue;
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas: "name links links links login";
+    
+    align-items: center;
+    justify-items: center;
+}
+
+footer{
+    grid-area: footer;
+    background-color: cornflowerblue;
+    align-content: center;
+}
+
+
+.contentInIndex{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "mainContent asideContent";
+
+    background-color: forestgreen;
+    grid-gap: 20px;
+}
+
+
+.loginMainContent{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    ". header header . ."
+    ". form form form .";
+    
+    background-color: forestgreen;
+    border: 2px solid black;
+    padding: 90px;
+    align-items: start;
+}
+
+#mainContent{
+    grid-area: mainContent;
+    display: grid;
+    grid-template-areas: 
+    "headline ."
+    "subtext subtext"
+    "article1 article2";
+
+    background-color: forestgreen;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+#asideContent{
+    grid-area: asideContent;
+    display: grid;
+    grid-template-areas: 
+    "aside";
+
+    background-color: pink;
+    padding: 20px;;
+    align-content:flex-start;
+}
+
+#mainHeader{
+    grid-area: headline;
+    background-color: darkslategray;
+    border: 2px solid black;
+
+    padding: 20px;
+    grid-gap: 10px;
+}
+
+#indexMainHeaderText{
+    grid-area: subtext;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#article1{
+    grid-area: article1;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#article2{
+    grid-area: article2;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.aside{
+    grid-area: aside;
+    background-color:deeppink;
+    border: 2px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    align-content: center;
+}
+
+#userLoginHeader{
+    grid-area: header;
+    background-color: darkslategray;
+    border: 2px solid black;
+    font: bold;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#form{
+    grid-area: form;
+    width: 600px;
+    height: 100px;
+    background-color: darkslategray;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 60px;
+    padding-top: 90px;
+
+    justify-items: center;
+}
+
+.name{
+    grid-area: name;
+    justify-self: center;
+}
+
+header > ul{
+    grid-area: links;
+    list-style-type: none;
+    
+}
+
+header > ul > li{
+    float: left;
+    padding: 12px;
+}
+
+header > h4 > a{
+    grid-area: login;
+    justify-self: end;
+}
+
+
+
+#reset
+{
+    border-radius: 25px;
+    background-color: red;
+}
+
+#submit{
+    border-radius: 25px;
+    background-color: green;
 }
