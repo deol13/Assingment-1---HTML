@@ -4,27 +4,48 @@
     <head>
         <title>The Guff News Paper</title>
         <meta charset="UTF-8"> <!-- Lets the page know it uses UTF-8 character set. (encoded with it) Which is recommended for html 5 -->
+
+        <style>
+            .item1 {grid-area: name;}
+            .item2 {grid-area: menu;}
+            .item3 {grid-area: login;}
+            .item4 {grid-area: main;}
+            .item5 {grid-area: aside;}
+            .item6 {grid-area: footer;}
+
+            .grid-container
+            {
+                display: grid;
+                grid-template-columns: 20% 45% 20% 15%;
+                grid-template-rows: 10% 80% 10%;
+                grid-template-areas: 
+                "name menu . login"
+                "main main main aside"
+                "footer footer footer footer";
+            }
+        </style>
+
     </head>
 
-    <body>
+    <body class="grid-container">
         <!--Wrapped much of the code in individual divs so I later can easily style the page-->
         <div>
             <header>
-                <h1>The Guffs News Paper</h1>   <!--h1 to h6 are headlines, from most important to least. Largets to smallest-->
+                <h1 class="item1">The Guffs News Paper</h1>   <!--h1 to h6 are headlines, from most important to least. Largets to smallest-->
                 <nav>
                     <ul>
-                        <li> <a href="https://www.google.se/" target="_blank">Google</a> </li> <!-- This is a hyperlink-->
-                        <li> <a href="https://www.youtube.com/" target="_blank">Youtube</a> </li> <!-- target="_blank" make it so the link opens in a new window/tab-->
-                        <li> <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> </li>
+                        <li class="item2"> <a href="https://www.google.se/" target="_blank">Google</a> </li> <!-- This is a hyperlink-->
+                        <li class="item3"> <a href="https://www.youtube.com/" target="_blank">Youtube</a> </li> <!-- target="_blank" make it so the link opens in a new window/tab-->
+                        <li class="item4"> <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> </li>
                     </ul>
-                    <h4> <a href="Login.html">Login</a> </h4> <!-- Opens a page located in the same folder as the current page -->
+                    <h4 class="item5"> <a href="Login.html">Login</a> </h4> <!-- Opens a page located in the same folder as the current page -->
                 </nav>
             </header>
         </div>
 
 
         <section>
-            <div>
+            <div class="item6">
                 <h2>Dogs can now fly</h2>
 
                 <p>
@@ -39,7 +60,7 @@
 
             </div>
 
-            <div>
+            <div class="item6">
                 <article>
                     <h3>New tech species found</h3>
 
@@ -64,7 +85,7 @@
                 </article>
             </div>
             
-            <div>
+            <div class="item6">
                 <article>
                     <h3>Slapping people in the face now legal</h3>
 
@@ -91,7 +112,7 @@
                 </article>
             </div>
 
-            <div>
+            <div class="item7">
                 <aside>
                     <h3>Nations</h3>
                     <ul>
@@ -125,7 +146,7 @@
                 </aside>
             </div>
 
-            <footer>
+            <footer class="item8">
                 <span>
                    &copy; Dennis Olsen
                 </span>
