@@ -1,5 +1,136 @@
-html{
-}
 body{
     font-family: sans-serif;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-gap: 10px;
+    background-color: mediumblue;
+    padding: 10px;
+}
+
+header{
+    grid-area: header;
+    background-color: royalblue;
+    display: grid;
+    grid-template-areas: "name links links links . login";
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+#main
+{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    background-color: cornflowerblue;
+}
+
+
+.mainContent{
+    display: grid;
+    grid-template-areas: 
+    "headline . aside"
+    "subtext subtext aside"
+    "article1 article2 aside";
+
+    background-color: forestgreen;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.loginMainContent{
+    display: grid;
+    grid-template-areas:
+    "header . ."
+    "form form form";
+    
+    background-color: forestgreen;
+    border: 2px solid black;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+}
+
+#mainHeader{
+    grid-area: headline;
+    background-color: darkslategray;
+    border: 2px solid black;
+
+    padding: 20px;
+}
+
+#indexMainHeaderText{
+    grid-area: subtext;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#mainTextLeftSide{
+    grid-area: article1;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#mainTextRightSide{
+    grid-area: article2;
+    background-color: darkslategray;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.aside{
+    grid-area: aside;
+    background-color:deeppink;
+    border: 2px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#userLoginHeader{
+    grid-area: header;
+    background-color: darkslategray;
+    border: 2px solid black;
+    font: bold;
+    padding: 15px;
+}
+
+#form{
+    grid-area: form;
+    background-color: darkslategray;
+    border: 2px solid black;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.name{
+    grid-area: name;
+    align-content: center;
+}
+
+div > header > ul{
+    grid-area: links;
+    list-style-type: none;
+}
+
+div > header > ul > li{
+    float: left;
+    padding: 12px;
+}
+
+div > header > h4 > a{
+    grid-area: login;
 }

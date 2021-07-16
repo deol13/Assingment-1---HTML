@@ -3,26 +3,25 @@
     <head>
         <title>Login into Guff News Paper</title>
         <meta charset="UTF-8"> <!-- Lets the page know it uses UTF-8 character set. (encoded with it) Which is recommended for html 5 -->
+        <link rel="stylesheet" href="indexStyle.css">
     </head>
 
     <body>
         <header>
-            <h1>Login into Guff News Paper</h1>
-            <nav>
-                <ul>
-                    <li> <a href="https://www.facebook.com/" target="_blank">Facebook</a> </li> <!-- This is a hyperlink-->
-                    <li> <a href="https://www.twitch.tv/" target="_blank">Twitch</a> </li> <!-- target="_blank" make it so the link opens in a new window/tab-->
-                    <li> <a href="https://github.com//" target="_blank">Github</a> </li>
-                </ul>
-                <h4> <a href="index.html">Index</a> </h4> <!-- Opens a page located in the same folder as the current page -->
-            </nav>
+            <h1 class="mainHeaderLogin">Login into Guff News Paper</h1>
+            <ul>
+                <li> <a href="https://www.facebook.com/" target="_blank">Facebook</a> </li> <!-- This is a hyperlink-->
+                <li> <a href="https://www.twitch.tv/" target="_blank">Twitch</a> </li> <!-- target="_blank" make it so the link opens in a new window/tab-->
+                <li> <a href="https://github.com//" target="_blank">Github</a> </li>
+            </ul>
+            <h4> <a href="index.html">Index</a> </h4> <!-- Opens a page located in the same folder as the current page -->
         </header>
 
         <section>
-            <div>
-                <h3>User Login</h3>
+            <div class="loginMainContent">
+                <h3 id="userLoginHeader">User Login</h3>
 
-                <form action="https://www.google.se/" method="POST">
+                <form id="form" action="https://www.google.se/" method="POST">
 
                     <input type="text" placeholder="User name"/>
 
