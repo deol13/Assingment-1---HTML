@@ -18,9 +18,8 @@ header{
     background-color: royalblue;
     border: 2px solid black;
     display: grid;
-    grid-template-areas: "name links links links . . login";
-
-    padding: 10px;
+    grid-template-areas: "name links links links login";
+    
     align-items: center;
     justify-items: center;
 }
@@ -58,8 +57,7 @@ footer{
     background-color: forestgreen;
     border: 2px solid black;
     padding: 90px;
-    align-items: center;
-    justify-items: center;
+    align-items: start;
 }
 
 #mainHeader{
@@ -136,6 +134,7 @@ div > header > ul{
 div > header > ul > li{
     float: left;
     padding: 12px;
+    
 }
 
 div > header > h4 > a{
@@ -146,6 +145,7 @@ div > header > h4 > a{
 header > ul{
     grid-area: links;
     list-style-type: none;
+    
 }
 
 header > ul > li{
