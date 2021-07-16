@@ -24,11 +24,6 @@ header{
     justify-items: center;
 }
 
-#main
-{
-    grid-area: main;
-}
-
 footer{
     grid-area: footer;
     background-color: cornflowerblue;
@@ -36,19 +31,19 @@ footer{
 }
 
 
-.mainContent{
+.contentInIndex{
+    grid-area: main;
     display: grid;
     grid-template-areas: 
-    "headline . aside"
-    "subtext subtext aside"
-    "article1 article2 aside";
+    "mainContent asideContent";
 
     background-color: forestgreen;
-    padding: 20px;
     grid-gap: 20px;
 }
 
+
 .loginMainContent{
+    grid-area: main;
     display: grid;
     grid-template-areas:
     ". header header . ."
@@ -58,6 +53,30 @@ footer{
     border: 2px solid black;
     padding: 90px;
     align-items: start;
+}
+
+#mainContent{
+    grid-area: mainContent;
+    display: grid;
+    grid-template-areas: 
+    "headline ."
+    "subtext subtext"
+    "article1 article2";
+
+    background-color: forestgreen;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+#asideContent{
+    grid-area: asideContent;
+    display: grid;
+    grid-template-areas: 
+    "aside";
+
+    background-color: pink;
+    padding: 20px;;
+    align-content:flex-start;
 }
 
 #mainHeader{
@@ -98,6 +117,8 @@ footer{
     padding-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
+
+    align-content: center;
 }
 
 #userLoginHeader{
@@ -124,23 +145,8 @@ footer{
 
 .name{
     grid-area: name;
+    justify-self: center;
 }
-
-div > header > ul{
-    grid-area: links;
-    list-style-type: none;
-}
-
-div > header > ul > li{
-    float: left;
-    padding: 12px;
-    
-}
-
-div > header > h4 > a{
-    grid-area: login;
-}
-
 
 header > ul{
     grid-area: links;
