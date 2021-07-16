@@ -9,7 +9,6 @@ body{
     "header"
     "main"
     "footer";
-    grid-gap: 10px;
     background-color: mediumblue;
     padding: 10px;
 }
@@ -17,9 +16,11 @@ body{
 header{
     grid-area: header;
     background-color: royalblue;
+    border: 2px solid black;
     display: grid;
-    grid-template-areas: "name links links links . login";
-    grid-gap: 10px;
+    grid-template-areas: "name links links links . . login";
+
+    padding: 10px;
     align-items: center;
     justify-items: center;
 }
@@ -32,6 +33,7 @@ header{
 footer{
     grid-area: footer;
     background-color: cornflowerblue;
+    align-content: center;
 }
 
 
@@ -50,15 +52,14 @@ footer{
 .loginMainContent{
     display: grid;
     grid-template-areas:
-    "header . ."
-    "form form form";
+    ". header header . ."
+    ". form form form .";
     
     background-color: forestgreen;
     border: 2px solid black;
-    padding: 10px;
+    padding: 90px;
     align-items: center;
     justify-items: center;
-    grid-gap: 10px;
 }
 
 #mainHeader{
@@ -67,6 +68,7 @@ footer{
     border: 2px solid black;
 
     padding: 20px;
+    grid-gap: 10px;
 }
 
 #indexMainHeaderText{
@@ -76,14 +78,14 @@ footer{
     padding: 10px;
 }
 
-#mainTextLeftSide{
+#article1{
     grid-area: article1;
     background-color: darkslategray;
     border: 2px solid black;
     padding: 10px;
 }
 
-#mainTextRightSide{
+#article2{
     grid-area: article2;
     background-color: darkslategray;
     border: 2px solid black;
@@ -105,20 +107,25 @@ footer{
     background-color: darkslategray;
     border: 2px solid black;
     font: bold;
-    padding: 15px;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 #form{
     grid-area: form;
+    width: 600px;
+    height: 100px;
     background-color: darkslategray;
     border: 2px solid black;
     border-radius: 25px;
-    align-items: center;
+    padding-left: 60px;
+    padding-top: 90px;
+
+    justify-items: center;
 }
 
 .name{
     grid-area: name;
-    align-content: center;
 }
 
 div > header > ul{
@@ -133,4 +140,33 @@ div > header > ul > li{
 
 div > header > h4 > a{
     grid-area: login;
+}
+
+
+header > ul{
+    grid-area: links;
+    list-style-type: none;
+}
+
+header > ul > li{
+    float: left;
+    padding: 12px;
+}
+
+header > h4 > a{
+    grid-area: login;
+    justify-self: end;
+}
+
+
+
+#reset
+{
+    border-radius: 25px;
+    background-color: red;
+}
+
+#submit{
+    border-radius: 25px;
+    background-color: green;
 }
